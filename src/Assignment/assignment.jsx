@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useCallback } from "react";
 import "./assignment.css";
 
 const Assignment = ({ questionsData, onFinishAssessment }) => {
@@ -12,6 +12,10 @@ const Assignment = ({ questionsData, onFinishAssessment }) => {
   const timer=assignment.duration_minutes;
   const [remainingTime, setRemainingTime] = useState(timer * 60);
 
+  const handleFinish = useCallback(() => {
+    onFinishAssessment(selectedAnswers);
+  }, [onFinishAssessment, selectedAnswers]);
+
   useEffect(() => {
     if (start && remainingTime > 0) {
       const timer = setTimeout(() => {
@@ -23,7 +27,7 @@ const Assignment = ({ questionsData, onFinishAssessment }) => {
     } else if (remainingTime === 0) {
       handleFinish();
     }
-  }, [remainingTime,start]);
+  }, [remainingTime, start, handleFinish]);
   const handleAnswer = (answer) => {
     const updatedAnswers = [...selectedAnswers];
     updatedAnswers[currentQuestion] = answer;
@@ -35,9 +39,7 @@ const Assignment = ({ questionsData, onFinishAssessment }) => {
   const handleNextQu = () => {
     setCurrentQuestion((nextQuestion) => nextQuestion + 1);
   };
-  const handleFinish = () => {
-    onFinishAssessment(selectedAnswers);
-  };
+
 
   const assignStart = () => {
     setStart(true);

@@ -41,3 +41,15 @@
 ::-webkit-scrollbar {
   display: none;
 }
+@media only screen and (max-width: 800px) {
+  .summary {
+    padding-top: 20px;
+    margin: auto;
+    width: 92%;
+  
+    height: 95vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+}

@@ -1,0 +1,12 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.App {
+  color: White;
+  height: 100vh;
+  width: 100hw;
+  
+
+  background-image: linear-gradient(rgb(28, 4, 48), rgb(36, 1, 37));
+}

@@ -1,0 +1,43 @@
+.summary {
+  padding-top: 20px;
+  margin: auto;
+  width: 70%;
+  background-image: linear-gradient(rgb(28, 4, 48), rgb(36, 1, 37));
+  height: 95vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.summary h1 {
+  text-align: center;
+}
+.summary h2 {
+  margin-top: 10px;
+}
+.sumQu {
+  margin-top: 20px;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.649);
+  border-radius: 10px;
+  
+}
+.sumQu li{
+  background-color: rgba(59, 58, 58, 0.202);
+  margin: 1rem;
+}
+.sumQu p{
+  padding: 1rem;
+}
+.correct{
+  color:green;
+
+}
+.wrong{
+  color:red;
+}
+.sumQu ul {
+  list-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}

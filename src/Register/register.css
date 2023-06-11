@@ -1,0 +1,54 @@
+.registration {
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+
+}
+.reg {
+  margin: auto;
+  width: 50%;
+
+  padding: 10px;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: rgba(0, 0, 0, 0.649);
+  border-radius: 10px;
+}
+.reg h1{
+    margin-bottom:2rem;
+}
+.reg div {
+  padding: 1rem;
+}
+.reg input {
+  padding: 15px;
+  background-color: transparent;
+  width: 70%;
+  border-style: none;
+  border:1px solid rgb(169, 169, 169);
+  border-radius: 10px;
+  color: white;
+}
+.reg button {
+  border-radius: 10px;
+width: 50%;
+  padding: 10px;
+  border-style: none;
+  color:white;
+  background-image:linear-gradient(to right,rgb(28, 4, 48),rgb(36, 1, 37));
+
+}
+.reg .error{
+    color: rgb(165, 16, 16);
+    
+}
+.reg button:hover{
+    background-image:linear-gradient(to left,rgb(28, 4, 48),rgb(36, 1, 37));
+}
+@media only screen and (max-width: 700px){
+  .reg{
+    width: 95%;
+  
+  }
+
+}

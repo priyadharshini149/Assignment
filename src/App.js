@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import "./App.css";
 import Register from "./Register/register";
 import Assignment from "./Assignment/assignment";
@@ -11,6 +11,7 @@ function App() {
   const [isAssignStarted, setIsAssignStarted] = useState(false);
   const [isAssignFinished, setIsAssignFinished] = useState(false);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
+
   console.log(selectedAnswers.length);
 
   const handleStartAssignment = (name, email) => {
@@ -39,6 +40,7 @@ function App() {
             <Assignment
               questionsData={questionsData}
               onFinishAssessment={handleFinishAssignment}
+              // remainingTime={remainingTime}
             ></Assignment>
           ) : (
             <Register onStartAssignment={handleStartAssignment}></Register>

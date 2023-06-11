@@ -11,10 +11,11 @@ function App() {
   const [isAssignStarted, setIsAssignStarted] = useState(false);
   const [isAssignFinished, setIsAssignFinished] = useState(false);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
+  const [timeSpent,setTimeSpent]=useState(0);
 
   console.log(selectedAnswers.length);
 
-  const handleStartAssignment = (name, email) => {
+  const handleStartAssignment = (name) => {
     console.log(isAssignFinished, isAssignStarted);
     setName(name);
     // setEmail(email);
@@ -25,6 +26,9 @@ function App() {
     setIsAssignStarted(false);
     setIsAssignFinished(true);
   };
+  const handleTimeSpent = (timespent) => {
+    setTimeSpent(timespent);
+  };
   return (
     <div className="App">
       {/* <Summary questionsData={questionsData} selectedAnswers={selectedAnswers} name={name}  ></Summary> */}
@@ -33,6 +37,7 @@ function App() {
           questionsData={questionsData}
           selectedAnswers={selectedAnswers}
           name={name}
+          timeSpent={timeSpent}
         ></Summary>
       ) : (
         <>
@@ -40,6 +45,7 @@ function App() {
             <Assignment
               questionsData={questionsData}
               onFinishAssessment={handleFinishAssignment}
+              timeSpent={handleTimeSpent}
               // remainingTime={remainingTime}
             ></Assignment>
           ) : (

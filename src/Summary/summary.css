@@ -28,9 +28,12 @@
 .sumQu p{
   padding: 1rem;
 }
-.correct{
+.correctAns{
   color:green;
 
+}
+.inactive{
+  visibility: hidden;
 }
 .wrong{
   color:red;

@@ -32,8 +32,8 @@ const Summary = ({ questionsData, selectedAnswers, name }) => {
           {questions.map((question, index) => (
             <li key={index}>
               <p>Question {index+1}: {question.question}</p>
-              <p className={question.answer===selectedAnswers[index]?"correct":"wrong"}>Your Answer: {selectedAnswers[index]}</p>
-              <p style={{color:"green"}}>Correct Answer: {question.answer}</p>
+              <p className={question.answer===selectedAnswers[index]?"correctAns":"wrong"}>Your Answer: {selectedAnswers[index]}</p>
+              <p className={question.answer!==selectedAnswers[index]?"correctAns":"inactive"}>Correct Answer: {question.answer}</p>
               <br></br>
             </li>
           ))}

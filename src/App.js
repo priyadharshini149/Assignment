@@ -7,7 +7,7 @@ import Summary from "./Summary/summary";
 
 function App() {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  // const [email, setEmail] = useState("");
   const [isAssignStarted, setIsAssignStarted] = useState(false);
   const [isAssignFinished, setIsAssignFinished] = useState(false);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
@@ -16,7 +16,7 @@ function App() {
   const handleStartAssignment = (name, email) => {
     console.log(isAssignFinished, isAssignStarted);
     setName(name);
-    setEmail(email);
+    // setEmail(email);
     setIsAssignStarted(true);
   };
   const handleFinishAssignment = (answers) => {

@@ -1,24 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./assignment.css";
 
 const Assignment = ({ questionsData, onFinishAssessment }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
+ 
   // const question=questionsData.questions[currentQuestion];
   const [start, setStart] = useState(false);
   const assignment = questionsData[0];
   const question = assignment.questions[currentQuestion];
+  const timer=assignment.duration_minutes;
+  const [remainingTime, setRemainingTime] = useState(timer * 60);
+
+  useEffect(() => {
+    if (start && remainingTime > 0) {
+      const timer = setTimeout(() => {
+        setRemainingTime((prevTime) => prevTime - 1);
+      }, 1000);
+      return () => {
+        clearTimeout(timer);
+      };
+    } else if (remainingTime === 0) {
+      handleFinish();
+    }
+  }, [remainingTime,start]);
   const handleAnswer = (answer) => {
     const updatedAnswers = [...selectedAnswers];
-
     updatedAnswers[currentQuestion] = answer;
     setSelectedAnswers(updatedAnswers);
   };
   const handlePrevQu = () => {
     setCurrentQuestion((prevQuestion) => prevQuestion - 1);
-    if (currentQuestion === 0) {
-      setStart(false);
-    }
   };
   const handleNextQu = () => {
     setCurrentQuestion((nextQuestion) => nextQuestion + 1);
@@ -26,15 +38,29 @@ const Assignment = ({ questionsData, onFinishAssessment }) => {
   const handleFinish = () => {
     onFinishAssessment(selectedAnswers);
   };
+
   const assignStart = () => {
     setStart(true);
   };
+
   return (
     <div className="assign">
+      {start && (
+        <div className={start ? "timer" : "timer-hide"}>
+          <p>Time: {remainingTime}s left</p>
+          <p>{start}</p>
+        </div>
+      )}
       <div className={start ? "description-hide" : "description"}>
         <h1>{assignment.assessmentName}</h1>
         <p>{assignment.description}</p>
-        <button onClick={() => assignStart()}>Start</button>
+        <button
+          onClick={() => {
+            assignStart();
+          }}
+        >
+          Start
+        </button>
       </div>
       <br></br>
       <div className={start ? "question" : "question-hide"}>
@@ -66,13 +92,14 @@ const Assignment = ({ questionsData, onFinishAssessment }) => {
             <button onClick={handleFinish}>Finish</button>
           )}
 
-          {currentQuestion < assignment.questions.length - 1 &&
-          <button
-            onClick={handleNextQu}
-            disabled={currentQuestion === assignment.questions.length - 1}
-          >
-            next Question
-          </button>}
+          {currentQuestion < assignment.questions.length - 1 && (
+            <button
+              onClick={handleNextQu}
+              disabled={currentQuestion === assignment.questions.length - 1}
+            >
+              next Question
+            </button>
+          )}
         </div>
       </div>
     </div>

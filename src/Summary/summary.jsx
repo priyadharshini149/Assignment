@@ -1,7 +1,7 @@
 import React from "react";
 import "./summary.css";
 
-const Summary = ({ questionsData, selectedAnswers, name }) => {
+const Summary = ({ questionsData, selectedAnswers, name,timeSpent }) => {
   const questions = questionsData[0].questions;
 
   const calcScore = () => {
@@ -17,14 +17,27 @@ const Summary = ({ questionsData, selectedAnswers, name }) => {
     const correctPercentage = (correctAnswer / questions.length) * 100;
     return correctPercentage;
   };
-  const score = calcScore();
+  const scorePercent = calcScore();
+  const score=(scorePercent/100)*questions.length
+
 
   return (
     <div>
       <div className="summary">
         <h1>Assessment Summary</h1>
-        <h2>Name: {name}</h2>
-        <h2>Score: {score}%</h2>
+        <div className="test_details">
+        <div className="user_details">
+        <h3>Name: {name}</h3>
+        <h3>Score: {score} / 25</h3>
+      
+        </div>
+        <div className="user_details">
+       
+        <h3>Time taken: {timeSpent} sec</h3>
+        <h3>Score Percentage: {scorePercent} %</h3>
+        </div>
+        </div>
+        
         {/* <h2>Score Percentage: {score.correctPercentage}</h2> */}
         <div className="sumQu">
 

@@ -1,7 +1,9 @@
 import React, { useState, useEffect,useCallback } from "react";
 import "./assignment.css";
+import { BsFillQuestionSquareFill } from 'react-icons/bs';
+import {BiTimeFive} from 'react-icons/bi';
 
-const Assignment = ({ questionsData, onFinishAssessment }) => {
+const Assignment = ({ questionsData, onFinishAssessment,timeSpent }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
  
@@ -13,8 +15,10 @@ const Assignment = ({ questionsData, onFinishAssessment }) => {
   const [remainingTime, setRemainingTime] = useState(timer * 60);
 
   const handleFinish = useCallback(() => {
+    let timespent=(timer*60)-remainingTime;
+    timeSpent(timespent);
     onFinishAssessment(selectedAnswers);
-  }, [onFinishAssessment, selectedAnswers]);
+  }, [onFinishAssessment, selectedAnswers,remainingTime,timer,timeSpent]);
 
   useEffect(() => {
     if (start && remainingTime > 0) {
@@ -55,7 +59,11 @@ const Assignment = ({ questionsData, onFinishAssessment }) => {
       )}
       <div className={start ? "description-hide" : "description"}>
         <h1>{assignment.assessmentName}</h1>
-        <p>{assignment.description}</p>
+        <p className="des">{assignment.description}</p>
+        <div className="details" >
+          <p> <BsFillQuestionSquareFill />   {assignment.questions.length} questions</p>
+          <p><BiTimeFive />  {timer} minutes</p>
+        </div>
         <button
           onClick={() => {
             assignStart();

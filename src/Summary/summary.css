@@ -19,24 +19,22 @@
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.649);
   border-radius: 10px;
-  
 }
-.sumQu li{
+.sumQu li {
   background-color: rgba(59, 58, 58, 0.202);
   margin: 1rem;
 }
-.sumQu p{
+.sumQu p {
   padding: 1rem;
 }
-.correctAns{
-  color:green;
-
+.correctAns {
+  color: green;
 }
-.inactive{
+.inactive {
   visibility: hidden;
 }
-.wrong{
-  color:red;
+.wrong {
+  color: red;
 }
 .sumQu ul {
   list-style: none;
@@ -44,12 +42,23 @@
 ::-webkit-scrollbar {
   display: none;
 }
+.user_details {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0rem 1rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.test_details {
+  margin-top: 2rem;
+ border: 1px solid rgb(77, 77, 77);
+ padding: 1rem 2rem 1rem 2rem;
+}
 @media only screen and (max-width: 800px) {
   .summary {
     padding-top: 20px;
     margin: auto;
     width: 92%;
-  
+
     height: 95vh;
     overflow-y: scroll;
     scrollbar-width: none;

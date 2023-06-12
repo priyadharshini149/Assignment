@@ -13,6 +13,7 @@ function App() {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
   const [timeSpent,setTimeSpent]=useState(0);
 
+
   console.log(selectedAnswers.length);
 
   const handleStartAssignment = (name) => {
@@ -21,7 +22,7 @@ function App() {
     // setEmail(email);
     setIsAssignStarted(true);
   };
-  const handleFinishAssignment = (answers) => {
+  const handleFinishAssignment = (answers,skill) => {
     setSelectedAnswers(answers);
     setIsAssignStarted(false);
     setIsAssignFinished(true);
@@ -38,6 +39,7 @@ function App() {
           selectedAnswers={selectedAnswers}
           name={name}
           timeSpent={timeSpent}
+        
         ></Summary>
       ) : (
         <>

@@ -4,9 +4,10 @@
 }
 .App {
   color: White;
+  color:black;
   height: 100vh;
   width: 100hw;
-  
+ background-image: linear-gradient(rgb(223, 189, 251), rgb(196, 244, 247));
 
-  background-image: linear-gradient(rgb(28, 4, 48), rgb(36, 1, 37));
+ background-color: rgb(176, 214, 249);
 }

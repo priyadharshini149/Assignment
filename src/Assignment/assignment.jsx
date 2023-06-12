@@ -6,6 +6,7 @@ import {BiTimeFive} from 'react-icons/bi';
 const Assignment = ({ questionsData, onFinishAssessment,timeSpent }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
+
  
   // const question=questionsData.questions[currentQuestion];
   const [start, setStart] = useState(false);
@@ -33,9 +34,12 @@ const Assignment = ({ questionsData, onFinishAssessment,timeSpent }) => {
     }
   }, [remainingTime, start, handleFinish]);
   const handleAnswer = (answer) => {
+    console.log(answer);
     const updatedAnswers = [...selectedAnswers];
     updatedAnswers[currentQuestion] = answer;
     setSelectedAnswers(updatedAnswers);
+  
+    
   };
   const handlePrevQu = () => {
     setCurrentQuestion((prevQuestion) => prevQuestion - 1);
@@ -43,6 +47,7 @@ const Assignment = ({ questionsData, onFinishAssessment,timeSpent }) => {
   const handleNextQu = () => {
     setCurrentQuestion((nextQuestion) => nextQuestion + 1);
   };
+
 
 
   const assignStart = () => {

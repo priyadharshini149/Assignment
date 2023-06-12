@@ -16,6 +16,8 @@
 
   padding: 2rem 0;
   background-color: rgba(0, 0, 0, 0.649);
+  background-color: rgb(244, 244, 244);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 10px;
 }
 .question ul {
@@ -24,6 +26,7 @@
 .question li {
   padding: 1rem;
   background-color: rgba(59, 58, 58, 0.202);
+  background-color: rgba(176, 176, 176, 0.202);
   margin: 1rem;
   text-align: left;
 }
@@ -41,12 +44,20 @@
   flex-direction: row;
   border-style: none;
   color: white;
-  background-image: linear-gradient(to right, rgb(28, 4, 48), rgb(36, 1, 37));
+  /* background-image: linear-gradient(to right, rgb(28, 4, 48), rgb(36, 1, 37));
+  background-image: linear-gradient(to right,rgb(223, 189, 251), rgb(196, 244, 247)); */
+  background-color: rgb(252, 4, 37);
   margin: 1rem;
+}
+.question .btn button:hover{
+  /* background-image:linear-gradient(to left,rgb(28, 4, 48),rgb(36, 1, 37));
+    background-image: linear-gradient(to right, rgb(196, 244, 247),rgb(223, 189, 251)); */
+    background-color: rgb(249, 84, 106);
 }
 .question p {
   padding: 1rem;
   font-size: 20px;
+  font-weight: bold;
 }
 .question span {
   margin-left: 10px;
@@ -68,6 +79,8 @@
 
   padding: 3rem 0;
   background-color: rgba(0, 0, 0, 0.649);
+  background-color: rgb(244, 244, 244);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 10px;
 }
 .description h1 {
@@ -89,17 +102,22 @@
   border-style: none;
 
   color: white;
-  background-image: linear-gradient(to right, rgb(28, 4, 48), rgb(36, 1, 37));
+  /* background-image: linear-gradient(to right, rgb(28, 4, 48), rgb(36, 1, 37));
+  background-image: linear-gradient(to right,rgb(223, 189, 251), rgb(196, 244, 247)); */
+  background-color: rgb(252, 4, 37);
   margin: 1rem;
   text-align: center;
 }
 .description button:hover {
-  background-image: linear-gradient(to left, rgb(28, 4, 48), rgb(36, 1, 37));
+   /* background-image:linear-gradient(to left,rgb(28, 4, 48),rgb(36, 1, 37));
+    background-image: linear-gradient(to right, rgb(196, 244, 247),rgb(223, 189, 251)); */
+    background-color: rgb(249, 84, 106);
 }
 .timer {
   float: right;
   margin-top: 20px;
-
+ font-weight: bold;
+ font-size: 20px;
   padding: 1rem;
 }
 .timer-hide {

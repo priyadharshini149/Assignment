@@ -32,7 +32,7 @@ const Summary = ({ questionsData, selectedAnswers, name, timeSpent }) => {
           "rgb(51, 255, 87)",
           "rgb(51, 255, 189)",
           "rgb(253, 225, 79   )",
-          // Add more colors if needed
+          
         ],
         borderColor: [
           "rgb(255, 140, 113)",
@@ -40,7 +40,7 @@ const Summary = ({ questionsData, selectedAnswers, name, timeSpent }) => {
           "rgb(51, 255, 87)",
           "rgb(51, 255, 189)",
           "rgb(253, 225, 79  )",
-          // Add more colors if needed
+        
         ],
         borderWidth: 1,
       },

@@ -154,4 +154,24 @@ font-size: 17px;
   
     
   }
+  
+}
+
+@media only screen and (max-width: 450px) {
+  .analysis{
+    display: flex;
+   
+   flex-direction: column;
+    margin-top: 1rem;
+
+    margin-bottom: 1rem;
+  }
+  .analysis div{
+padding: 0.2rem;
+    width: 100%;
+    margin: auto;
+  }
+  
+ 
+
 }

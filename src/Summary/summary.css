@@ -2,7 +2,7 @@
   padding-top: 20px;
   margin: auto;
   width: 70%;
-  background-image: linear-gradient(rgb(28, 4, 48), rgb(36, 1, 37));
+ padding: 1rem;
   height: 95vh;
   overflow-y: scroll;
   scrollbar-width: none;
@@ -18,14 +18,18 @@
   margin-top: 20px;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.649);
+  background-color: rgb(244, 244, 244);
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .sumQu li {
-  background-color: rgba(59, 58, 58, 0.202);
+  background-color: rgb(228, 228, 228);
   margin: 1rem;
+  border-radius: 10px;
 }
 .sumQu p {
   padding: 1rem;
+
 }
 .correctAns {
   color: green;
@@ -44,14 +48,70 @@
 }
 .user_details {
   display: flex;
+  font-weight: "bold";
+  font-size: 20px;
+  
   justify-content: space-between;
-  margin: 1rem 0rem 1rem;
+  margin: 1rem;
+  padding: 1rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .test_details {
   margin-top: 2rem;
- border: 1px solid rgb(77, 77, 77);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+ /* border: 1px solid rgb(77, 77, 77); */
  padding: 1rem 2rem 1rem 2rem;
+ border-radius: 10px;
+ background-color: rgb(244, 244, 244);
+}
+.analysis{
+  display: flex;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+border-radius: 10px;
+  margin-top: 2rem;
+  background-color: rgb(244, 244, 244);
+  margin-bottom: 2rem;
+}
+.analysis div{
+  padding: 1rem;
+ 
+  width:50%;
+}
+.analysis_table{
+  margin-top: 0.5rem;
+}
+.analysis_table table{
+  width: 100%;
+  
+  
+}
+.analysis_table table .total
+{
+  font-weight: bold;
+font-size: 20px;
+}
+.analysis_table table .table_head
+{
+  font-weight: bold;
+font-size: 20px;
+}
+
+.analysis_table table td{
+  text-align: center;
+  padding:1rem;
+
+
+  
+}
+.analysis_table table tr,th{
+ border: 1px solid white;
+}
+ .test_details span{
+  font-weight:normal;
+  margin-left: 0.5rem;
+  
+  color: rgb(27, 27, 27);
 }
 @media only screen and (max-width: 800px) {
   .summary {
@@ -63,5 +123,35 @@
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+  .user_details {
+    display: flex;
+    font-weight: "bold";
+    font-size: 17px;
+    
+    justify-content: space-between;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .analysis_table table .total
+  {
+   
+  font-size: 17px;
+  }
+  .analysis_table table .table_head
+{
+
+font-size: 17px;
+}
+
+  
+  .analysis_table table td{
+  
+    padding:0.5rem;
+  
+  
+    
   }
 }

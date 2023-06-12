@@ -28,7 +28,7 @@ npm install
 
 ## Run Application
 
-> To start the application, use the following command
+To start the application, use the following command
 
 ```
 npm start

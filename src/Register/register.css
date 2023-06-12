@@ -12,6 +12,8 @@
   text-align: center;
   padding: 2rem 0;
   background-color: rgba(0, 0, 0, 0.649);
+  background-color: rgb(244, 244, 244);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 10px;
 }
 .reg h1{
@@ -27,7 +29,7 @@
   border-style: none;
   border:1px solid rgb(169, 169, 169);
   border-radius: 10px;
-  color: white;
+  color: black;
 }
 .reg button {
   border-radius: 10px;
@@ -35,7 +37,9 @@ width: 50%;
   padding: 10px;
   border-style: none;
   color:white;
-  background-image:linear-gradient(to right,rgb(28, 4, 48),rgb(36, 1, 37));
+  /* background-image:linear-gradient(to right,rgb(28, 4, 48),rgb(36, 1, 37)); */
+  /* background-image: linear-gradient(to right,rgb(223, 189, 251), rgb(196, 244, 247)); */
+  background-color: rgb(252, 4, 37);
 
 }
 .reg .error{
@@ -43,7 +47,9 @@ width: 50%;
     
 }
 .reg button:hover{
-    background-image:linear-gradient(to left,rgb(28, 4, 48),rgb(36, 1, 37));
+    /* background-image:linear-gradient(to left,rgb(28, 4, 48),rgb(36, 1, 37));
+    background-image: linear-gradient(to right, rgb(196, 244, 247),rgb(223, 189, 251)); */
+    background-color: rgb(247, 65, 90);
 }
 @media only screen and (max-width: 700px){
   .reg{
